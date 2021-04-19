@@ -1,7 +1,7 @@
 {
   "name": "js-in-json",
   "version": "0.0.0",
-  "description": "",
+  "description": "A server side agnostic way to stream JavaScript.",
   "main": "./cjs/index.js",
   "scripts": {
     "build": "npm run cjs && npm run test",
@@ -9,7 +9,13 @@
     "coveralls": "c8 report --reporter=text-lcov | coveralls",
     "test": "c8 node test/index.js"
   },
-  "keywords": ["stream", "JS", "SSR", "JSON", "islands"],
+  "keywords": [
+    "stream",
+    "JS",
+    "SSR",
+    "JSON",
+    "islands"
+  ],
   "author": "Andrea Giammarchi",
   "license": "ISC",
   "devDependencies": {
@@ -42,5 +48,13 @@
     "rollup-plugin-includepaths": "^0.2.4",
     "rollup-plugin-terser": "^7.0.2",
     "terser": "^5.6.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebReflection/js-in-json.git"
+  },
+  "bugs": {
+    "url": "https://github.com/WebReflection/js-in-json/issues"
+  },
+  "homepage": "https://github.com/WebReflection/js-in-json#readme"
 }
