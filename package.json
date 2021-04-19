@@ -1,0 +1,46 @@
+{
+  "name": "js-in-json",
+  "version": "0.0.0",
+  "description": "",
+  "main": "./cjs/index.js",
+  "scripts": {
+    "build": "npm run cjs && npm run test",
+    "cjs": "ascjs --no-default esm cjs",
+    "coveralls": "c8 report --reporter=text-lcov | coveralls",
+    "test": "c8 node test/index.js"
+  },
+  "keywords": ["stream", "JS", "SSR", "JSON", "islands"],
+  "author": "Andrea Giammarchi",
+  "license": "ISC",
+  "devDependencies": {
+    "ascjs": "^5.0.1",
+    "c8": "^7.7.1",
+    "coveralls": "^3.1.0"
+  },
+  "module": "./esm/index.js",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./esm/index.js",
+      "default": "./cjs/index.js"
+    },
+    "./package.json": "./package.json",
+    "./session": {
+      "import": "./esm/session.js",
+      "default": "./cjs/session.js"
+    }
+  },
+  "dependencies": {
+    "@babel/core": "^7.13.15",
+    "@babel/parser": "^7.13.15",
+    "@babel/plugin-transform-runtime": "^7.13.15",
+    "@babel/preset-env": "^7.13.15",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs": "^18.0.0",
+    "@rollup/plugin-node-resolve": "^11.2.1",
+    "rollup": "^2.45.2",
+    "rollup-plugin-includepaths": "^0.2.4",
+    "rollup-plugin-terser": "^7.0.2",
+    "terser": "^5.6.1"
+  }
+}
