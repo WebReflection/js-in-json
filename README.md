@@ -1,5 +1,7 @@
 # JS in JSON
 
+![logo](./js-in-json.png)
+
 A server side agnostic way to stream JavaScript.
 
 - - -
