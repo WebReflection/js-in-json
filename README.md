@@ -1,6 +1,12 @@
 # JS in JSON
 
-A server side agnostic way to stream JavaScript.
+A server side agnostic way to stream JavaScript, ideal for:
+
+  * inline hydration
+  * network free ad-hoc dependencies
+  * bootstrap on demand
+  * libraries on demand
+  * one JSON file to rule all SSR cases
 
 - - -
 
