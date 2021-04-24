@@ -21,10 +21,11 @@ const {createRequire} = require('module');
 const {join, resolve} = require('path');
 const {writeFile} = require('fs/promises');
 
+const Session = (m => /* c8 ignore start */ m.__esModule ? m.default : m /* c8 ignore stop */)(require('js-in-json-session'));
+
 const {parse} = require('./bundler.js');
 const {crawl} = require('./graph.js');
 const {getGlobal, getInclude, isSimple, keys, stringify} = require('./utils.js');
-const Session = (m => /* c8 ignore start */ m.__esModule ? m.default : m /* c8 ignore stop */)(require('./session.js'));
 
 const defaults = {
   babel: true,

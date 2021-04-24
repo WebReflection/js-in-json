@@ -20,10 +20,11 @@ import {createRequire} from 'module';
 import {join, resolve} from 'path';
 import {writeFile} from 'fs/promises';
 
+import Session from 'js-in-json-session';
+
 import {parse} from './bundler.js';
 import {crawl} from './graph.js';
 import {getGlobal, getInclude, isSimple, keys, stringify} from './utils.js';
-import Session from './session.js';
 
 const defaults = {
   babel: true,
