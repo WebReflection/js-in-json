@@ -1,23 +1,23 @@
 {
   "_": {
-    "module": "self._to0=function _($){return _[$]};",
+    "module": "self._pq0=function _($){return _[$]};",
     "code": "",
     "dependencies": []
   },
   "uarray": {
-    "module": "_to0.uarray=function(e){\"use strict\";var r=[],i=Array.isArray,s=r.indexOf,a=r.slice,n={isArray:i,indexOf:s,slice:a};return e.default=n,e.indexOf=s,e.isArray=i,e.slice=a,Object.defineProperty(e,\"__esModule\",{value:!0}),e}({});",
+    "module": "_pq0.uarray=function(e){\"use strict\";var r=[],i=Array.isArray,s=r.indexOf,a=r.slice,n={isArray:i,indexOf:s,slice:a};return e.default=n,e.indexOf=s,e.isArray=i,e.slice=a,Object.defineProperty(e,\"__esModule\",{value:!0}),e}({});",
     "code": "",
     "dependencies": []
   },
   "exports": {
-    "module": "_to0.exports=function(r){\"use strict\";var t=_to0.uarray;return r.default=t,r}({});",
-    "code": "_to0,console.log(456);",
+    "module": "_pq0.exports=function(r){\"use strict\";var a=_pq0.uarray;return r.default=a,r}({});",
+    "code": "_pq0,console.log(456);",
     "dependencies": [
       "uarray"
     ]
   },
   "imports": {
-    "module": "_to0.imports=function(r){\"use strict\";var t=_to0.uarray,e=_to0.exports.ever;return r.ever=e,r.test=t,r}({});",
+    "module": "_pq0.imports=function(r){\"use strict\";var e=_pq0.uarray,t=_pq0.exports.ever;return r.ever=t,r.test=e,r}({});",
     "code": "",
     "dependencies": [
       "uarray",
