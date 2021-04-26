@@ -8,6 +8,11 @@ A server side agnostic way to stream JavaScript, ideal for:
   * libraries on demand
   * one JSON file to rule all SSR cases
 
+The **Session** utility is currently available for:
+
+  * [JS](https://github.com/WebReflection/js-in-json-session#readme)
+  * [PHP](https://github.com/WebReflection/js-in-json-session/blob/main/php/session.php)
+
 - - -
 
 An "*islands friendly*" approach to Server Side Rendering able to produce *stream-able JS* on demand, via any programming language, through a single JSON bundle file instrumented to *flush()* any script, after optional transpilation and/or minification.
