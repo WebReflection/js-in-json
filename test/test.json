@@ -1,23 +1,23 @@
 {
   "_": {
-    "module": "self._eg0=function _($){return _[$]};",
+    "module": "self._gy0=function _($){return _[$]};",
     "code": "",
     "dependencies": []
   },
   "uarray": {
-    "module": "_eg0.uarray=function(e){\"use strict\";var r=[],i=Array.isArray,s=r.indexOf,a=r.slice,n={isArray:i,indexOf:s,slice:a};return e.default=n,e.indexOf=s,e.isArray=i,e.slice=a,Object.defineProperty(e,\"__esModule\",{value:!0}),e}({});",
+    "module": "_gy0.uarray=function(e){\"use strict\";var r=[],i=Array.isArray,s=r.indexOf,a=r.slice,n={isArray:i,indexOf:s,slice:a};return e.default=n,e.indexOf=s,e.isArray=i,e.slice=a,Object.defineProperty(e,\"__esModule\",{value:!0}),e}({});",
     "code": "",
     "dependencies": []
   },
   "exports": {
-    "module": "_eg0.exports=function(r){\"use strict\";var a=_eg0.uarray;return r.default=a,r}({});",
-    "code": "_eg0,console.log(456);",
+    "module": "_gy0.exports=function(r){\"use strict\";var a=_gy0.uarray;return r.default=a,r}({});",
+    "code": "_gy0,console.log(456);",
     "dependencies": [
       "uarray"
     ]
   },
   "imports": {
-    "module": "_eg0.imports=function(e){\"use strict\";var r=_eg0.uarray,t=_eg0.exports.ever;return e.ever=t,e.test=r,e}({});",
+    "module": "_gy0.imports=function(r){\"use strict\";var e=_gy0.uarray,t=_gy0.exports.ever;return r.ever=t,r.test=e,r}({});",
     "code": "",
     "dependencies": [
       "uarray",

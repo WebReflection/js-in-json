@@ -12,6 +12,7 @@ The **Session** utility is currently available for:
 
   * [JS](https://github.com/WebReflection/js-in-json-session#readme)
   * [PHP](https://github.com/WebReflection/js-in-json-session/blob/main/php/session.php)
+  * [Python](https://github.com/WebReflection/js-in-json-session/blob/main/python/session.py)
 
 - - -
 
