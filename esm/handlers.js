@@ -16,6 +16,7 @@
  * CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
+import etag from 'etag';
 import {dirname, resolve} from 'path';
 import {iife} from './rollup.js';
 import {
@@ -30,10 +31,15 @@ const createCacheEntry = async (
   if (!dependencies.has(innerName))
       dependencies.add(innerName);
   if (!hasOwnProperty.call(cache, innerName)) {
+    const body = await iife(
+      CommonJS.resolve(innerName),
+      innerName,
+      true,
+      module
+    );
     cache[innerName] = {
-      module: await iife(
-        CommonJS.resolve(innerName), innerName, true, module
-      ),
+      module: body,
+      etag: etag(body),
       code: '',
       dependencies: []
     };

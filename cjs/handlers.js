@@ -17,6 +17,7 @@
  * CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
+const etag = (m => /* c8 ignore start */ m.__esModule ? m.default : m /* c8 ignore stop */)(require('etag'));
 const {dirname, resolve} = require('path');
 const {iife} = require('./rollup.js');
 const {
@@ -30,10 +31,15 @@ const createCacheEntry = async (
   if (!dependencies.has(innerName))
       dependencies.add(innerName);
   if (!hasOwnProperty.call(cache, innerName)) {
+    const body = await iife(
+      CommonJS.resolve(innerName),
+      innerName,
+      true,
+      module
+    );
     cache[innerName] = {
-      module: await iife(
-        CommonJS.resolve(innerName), innerName, true, module
-      ),
+      module: body,
+      etag: etag(body),
       code: '',
       dependencies: []
     };

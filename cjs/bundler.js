@@ -41,16 +41,24 @@ const {
 } = require('./utils.js');
 
 const {exportHandler, importHandler} = require('./handlers.js');
+const etag = (m => /* c8 ignore start */ m.__esModule ? m.default : m /* c8 ignore stop */)(require('etag'));
 
 const addCacheEntry = async (CommonJS, name, module, parsed, remove) => {
   const {cache, code} = module;
   if (hasOwnProperty.call(cache, name))
     return;
   const dependencies = new Set;
+  const body = await moduleTransformer(
+    CommonJS,
+    name,
+    module,
+    dependencies,
+    parsed,
+    remove
+  );
   cache[name] = {
-    module: await moduleTransformer(
-      CommonJS, name, module, dependencies, parsed, remove
-    ),
+    module: body,
+    etag: etag(body),
     code: code ? await codeTransformer(module) : '',
     dependencies: [...dependencies]
   };
@@ -203,7 +211,7 @@ const parse = async (CommonJS, graph, modules) => {
       await addCacheEntry(
         CommonJS, name, {...module, input}, parsed, remove
       );
-      }
+    }
   }
   if (!/^(?:1|true|y|yes)$/i.test(env.JS_IN_JSON_DEBUG))
     await Promise.all([...remove].map(file => unlink(file)));
