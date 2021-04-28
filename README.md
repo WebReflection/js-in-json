@@ -1,4 +1,4 @@
-# JS in JSON
+# JS in JS![O](./logo/JSinJSON.24.png)N
 
 A server side agnostic way to stream JavaScript, ideal for:
 
