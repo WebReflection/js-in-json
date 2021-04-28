@@ -22,7 +22,7 @@ const handler = (req, res) => {
     <script type="module">${html([current.add('builtin-elements').flush()])}</script>
   </head>
   <main></main>
-  <script type="module" async>${html([current.add('@main').flush()])}</script>
+  <script type="module">${html([current.add('@main').flush()])}</script>
 </html>
     `);
   }
