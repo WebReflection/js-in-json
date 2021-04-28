@@ -19,7 +19,7 @@ const handler = (req, res) => {
   <head>
     <meta name="viewport" content="initial-scale=1">
     <title>JS in JSON</title>
-    <script type="module">${html([current.add('@main').flush()])}</script>
+    <script type="module">${html([current.add('builtin-elements').flush()])}</script>
   </head>
   <main></main>
   <script type="module" async>${html([current.add('@main').flush()])}</script>
