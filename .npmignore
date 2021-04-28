@@ -3,6 +3,7 @@
 .eslintrc.json
 .travis.yml
 coverage/
+examples/
 node_modules/
 rollup/
 test/

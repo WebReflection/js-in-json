@@ -1,0 +1,8 @@
+{
+  "type": "module",
+  "dependencies": {
+    "builtin-elements": "^0.2.1",
+    "uhtml-ssr": "^0.6.1",
+    "umeta": "^0.2.4"
+  }
+}

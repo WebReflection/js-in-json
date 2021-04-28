@@ -20,7 +20,7 @@
 const {rollup} = require('rollup');
 const includePaths = (m => /* c8 ignore start */ m.__esModule ? m.default : m /* c8 ignore stop */)(require('rollup-plugin-includepaths'));
 const {terser} = require('rollup-plugin-terser');
-const babel = (m => /* c8 ignore start */ m.__esModule ? m.default : m /* c8 ignore stop */)(require('@rollup/plugin-babel'));
+const {babel} = require('@rollup/plugin-babel');
 const {nodeResolve} = require('@rollup/plugin-node-resolve');
 const commonjs = (m => /* c8 ignore start */ m.__esModule ? m.default : m /* c8 ignore stop */)(require('@rollup/plugin-commonjs'));
 
