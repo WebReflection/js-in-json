@@ -1,7 +1,8 @@
 import http from 'http';
 import {env} from 'process';
 
-import {render, html} from 'uhtml-ssr';
+import {render, html, Hole} from 'uhtml-ssr';
+function JS(name) { return new Hole(this.add(name).flush()); }
 
 import {ready, session} from './js-in-json.js';
 
@@ -11,7 +12,7 @@ const handler = (req, res) => {
     res.write('Not Found');
   }
   else {
-    const current = session();
+    const js = JS.bind(session());
     res.writeHead(200, {'content-type': 'text/html;charset=utf-8'});
     render(res, html`
 <!doctype html>
@@ -19,10 +20,10 @@ const handler = (req, res) => {
   <head>
     <meta name="viewport" content="initial-scale=1">
     <title>JS in JSON</title>
-    <script type="module">${html([current.add('builtin-elements').flush()])}</script>
+    <script type="module">${js('builtin-elements')}</script>
   </head>
   <main></main>
-  <script type="module">${html([current.add('@main').flush()])}</script>
+  <script type="module">${js('@main')}</script>
 </html>
     `);
   }
