@@ -50,7 +50,11 @@ const addCacheEntry = async (CommonJS, name, module, parsed, remove) => {
   cache[name] = {
     module: body,
     etag: etag(body),
-    code: code ? await codeTransformer(module) : '',
+    code: code ? (
+      typeof code === 'string' ?
+        `!${code}(${module.require});` :
+        (await codeTransformer(module))
+      ) : '',
     dependencies: [...dependencies]
   };
 };

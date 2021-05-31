@@ -10,7 +10,8 @@ const {save, session} = JSinJSON({
   // minify: false,
   modules: {
     imports: {
-      input: './imports.js'
+      input: './imports.js',
+      code: 'function($){console.log($.length)}'
     },
     exports: {
       input: './exports.js',
