@@ -92,7 +92,7 @@ const isJS = name => /^\.[mc]?js$/i.test(extname(name));
 exports.isJS = isJS;
 const isLocal = name => /^[./]/.test(name);
 exports.isLocal = isLocal;
-const isSimple = name => /^[_a-z]+[_0-9a-z]*$/i.test(name);
+const isSimple = name => /^[$_a-z]+[$_0-9a-z]*$/i.test(name);
 exports.isSimple = isSimple;
 
 const slice = (code, info) => code.slice(info.start, info.end);

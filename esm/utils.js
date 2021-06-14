@@ -78,7 +78,7 @@ export const getRealName = (code, source, replace) => {
 
 export const isJS = name => /^\.[mc]?js$/i.test(extname(name));
 export const isLocal = name => /^[./]/.test(name);
-export const isSimple = name => /^[_a-z]+[_0-9a-z]*$/i.test(name);
+export const isSimple = name => /^[$_a-z]+[$_0-9a-z]*$/i.test(name);
 
 export const slice = (code, info) => code.slice(info.start, info.end);
 
