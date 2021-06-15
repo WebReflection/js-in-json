@@ -46,7 +46,7 @@ const iife = async (input, name, esModule, {
   });
   const ignore = namespace === require ? global : require;
   const {output} = await bundle.generate({
-    esModule,
+    esModule: false,
     name: '__',
     format: 'iife',
     exports: 'named',
