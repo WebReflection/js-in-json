@@ -34,7 +34,7 @@ const createCacheEntry = async (
     const body = await iife(
       CommonJS.resolve(innerName),
       innerName,
-      true,
+      false,
       module
     );
     cache[innerName] = {
