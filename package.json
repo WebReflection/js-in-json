@@ -1,6 +1,6 @@
 {
   "name": "js-in-json",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "A server side agnostic way to stream JavaScript.",
   "main": "./cjs/index.js",
   "scripts": {
